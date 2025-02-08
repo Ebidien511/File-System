@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 public abstract class FileSystemItem {
     protected String name;
-    protected byte size;
     protected Folder parentFolder;
     protected LocalDateTime dateCreated;
     protected LocalDateTime lastModificationDate;
@@ -18,11 +17,11 @@ public abstract class FileSystemItem {
         this.lastAccessedDate = LocalDateTime.now();
     }
 
-    public abstract byte getSize();
+    public abstract long getSize();
 
-    public String getItemPath(){
+    public String getFullPath(){
         if(parentFolder == null) return name;
-        else return parentFolder.getItemPath()+"/"+name;
+        else return parentFolder.getFullPath()+"/"+name;
     }
 
     public String getName(){
