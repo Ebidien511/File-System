@@ -2,14 +2,14 @@ package dto;
 
 import java.time.LocalDateTime;
 
-public abstract class FileSystemItem {
+public abstract class FileSystemEntry {
     protected String name;
     protected Folder parentFolder;
     protected LocalDateTime dateCreated;
     protected LocalDateTime lastModificationDate;
     protected LocalDateTime lastAccessedDate;
 
-    public FileSystemItem(String name, Folder parentFolder) {
+    public FileSystemEntry(String name, Folder parentFolder) {
         this.name = name;
         this.parentFolder = parentFolder;
         this.dateCreated = LocalDateTime.now();

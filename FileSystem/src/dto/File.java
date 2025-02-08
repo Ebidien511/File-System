@@ -1,6 +1,6 @@
 package dto;
 
-public class File extends FileSystemItem{
+public class File extends FileSystemEntry {
 
     private long size;
     private String content;
